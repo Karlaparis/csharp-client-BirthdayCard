@@ -1,0 +1,61 @@
+﻿@model BirthdayCard.Models.Card
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/sitelight.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+
+    <h4 class="bcg">
+        Birthday Card Generator
+    </h4>
+
+    <div id="contains">
+
+
+        <h2> Birthday Card Sent</h2>
+
+
+
+        <div>
+            <dl>
+                <dd>
+                    @Html.DisplayNameFor(model => model.From):
+                    @Html.DisplayFor(model => model.From)
+                </dd>
+
+                <dd>
+                    @Html.DisplayNameFor(model => model.To):
+                    @Html.DisplayFor(model => model.To)
+                </dd>
+
+
+                <dd>
+                    @Html.DisplayNameFor(model => model.Message):
+                    @Html.DisplayFor(model => model.Message)
+                </dd>
+
+
+            </dl>
+        </div>
+
+        <hr />
+        <footer>
+            &copy;2016 - My ASP.NET Application
+        </footer>
+
+    </div>
+</body>
+</html>

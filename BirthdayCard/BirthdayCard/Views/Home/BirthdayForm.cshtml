@@ -1,0 +1,60 @@
+﻿@model BirthdayCard.Models.Card
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Birthday Card Generator</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/sitelight.css" rel="stylesheet" />
+   
+
+</head>
+<body>
+
+    <h2 class="bcg">
+        Birthday Card Generator
+    </h2>
+
+
+    <div id="contains">
+
+        <h4> Send a Birthday Card</h4>
+
+        <form asp-action="BirthdayForm">
+            <div asp-validation-summary="All" class="text-dark"></div>
+
+            <div class="form-group">
+                <label asp-for="From"></label>:
+                <input class="input-group-sm" autocomplete="off" asp-for="From" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="To"></label>:
+                <input class="input-group-sm" autocomplete="off" asp-for="To" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Message"></label>:
+                <input asp-for="Message" autocomplete="off" />
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Send Card" class="btn btn-success" />
+            </div>
+        </form>
+
+        <hr />
+        <footer>
+            &copy;2016 - My ASP.NET Application
+
+        </footer>
+</div>
+</body>
+</html>
